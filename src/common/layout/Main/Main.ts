@@ -9,7 +9,4 @@ export const Main = styled.main<IsAuth>`
 		css<IsAuth>`
 			grid-area: 2/1/3/2;
 		`}
-	@media ${theme.media.tablet} {
-		grid-area: 2/1/3/2;
-	}
 `;

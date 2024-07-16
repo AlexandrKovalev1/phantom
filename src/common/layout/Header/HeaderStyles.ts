@@ -12,12 +12,17 @@ const Header = styled.header<IsAuth>`
 	${props =>
 		props.$isAuth &&
 		css<IsAuth>`
-			background-color: unset;
 			grid-area: 1/2/2/3;
+			position: sticky;
+			top: 0;
+			background-color: ${theme.darkMode.backgroundBody};
 		`}
 
 	@media ${theme.media.tablet} {
-		grid-area: 1/1/2/2;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 `;
 const HeaderContainer = styled(Container)`

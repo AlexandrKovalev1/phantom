@@ -5,9 +5,7 @@ import logo from '../../../assets/img/Logo.png';
 //@ts-ignore
 import logoAfterLogin from '../../../assets/img/LogoAfterLogin.png';
 import { PATH } from '../../../app/routes';
-import { IsAuth } from '../../types/types';
 import { LogOutOrBurgerMenu } from './LogOutOrBurgerMenu/LogOutOrBurgerMenu';
-import { useDeviceType } from '../../utils/hooks/useDeviceType';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../../../features/auth/model/authSlice';
 

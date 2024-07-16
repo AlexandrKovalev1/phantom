@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../../styles/Theme';
 
-const Button = styled.button<{ isOpen: boolean }>`
+const Button = styled.button<{ $isOpen: boolean }>`
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -52,7 +52,7 @@ const Button = styled.button<{ isOpen: boolean }>`
 	}
 
 	${props =>
-		props.isOpen &&
+		props.$isOpen &&
 		css`
 			&:hover span {
 				background-color: rgba(225, 225, 225, 0);
@@ -81,8 +81,9 @@ const BurgerMenuBody = styled.div`
 	left: 0;
 	right: 0;
 	bottom: 0;
-	//width: 100%;
-	//height: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: ${theme.darkMode.color.primary};
 `;
 
 export const S = {

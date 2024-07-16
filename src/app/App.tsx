@@ -8,11 +8,13 @@ import { IsAuth } from '../common/types/types';
 import { theme } from '../common/styles/Theme';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../features/auth/model/authSlice';
-import { useDeviceType } from '../common/utils/hooks/useDeviceType';
+import { useSetDeviceType } from './useSetDeviceType';
+import { selectDeviceType } from './appSlice';
 
 function App() {
+	useSetDeviceType();
+	const deviceType = useSelector(selectDeviceType);
 	const isAuth = useSelector(selectIsAuth);
-	const { deviceType } = useDeviceType();
 	const desktopMode = isAuth && deviceType === 'desktop';
 
 	return (
@@ -36,8 +38,10 @@ const AppWrapper = styled.div<IsAuth>`
 		props.$isAuth &&
 		css<IsAuth>`
 			grid-template-columns: auto 4fr;
-		`} @media ${theme.media.tablet} {
-		grid-template-columns: 1fr;
+		`}
+
+	@media ${theme.media.tablet} {
+		display: block;
 	}
 `;
 
