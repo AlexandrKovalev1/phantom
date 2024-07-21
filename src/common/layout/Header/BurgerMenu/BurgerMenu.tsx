@@ -15,12 +15,12 @@ export const BurgerMenu = (props: Props) => {
 		}
 	}, [isOpen]);
 
-	const onClickHandled = () => {
+	const handleSetIsOpen = () => {
 		setIsOpen(prevState => !prevState);
 	};
 	return (
 		<div>
-			<S.Button $isOpen={isOpen} onClick={onClickHandled}>
+			<S.Button $isOpen={isOpen} onClick={handleSetIsOpen}>
 				<span></span>
 			</S.Button>
 			{isOpen && <S.BurgerMenuBody></S.BurgerMenuBody>}

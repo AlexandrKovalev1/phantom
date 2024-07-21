@@ -36,6 +36,7 @@ const UserAvatarWrapper = styled.div`
 `;
 const UserAvatar = styled.img`
 	width: 100%;
+	height: 100%;
 `;
 const UserData = styled.div`
 	display: flex;

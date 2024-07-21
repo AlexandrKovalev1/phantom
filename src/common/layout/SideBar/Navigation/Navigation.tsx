@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { S } from './NavigationStyles';
 import { PATH } from '../../../../app/routes';
-import { Icon } from '../../../Icon/Icon';
+import { Icon } from '../../../components/Icon/Icon';
 
 type Props = {};
 export const Navigation = (props: Props) => {

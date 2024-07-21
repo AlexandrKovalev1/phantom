@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
-import { Container } from '../../Container/Container';
+import { Container } from '../../components/Container/Container';
 import { IsAuth } from '../../types/types';
 
 const Header = styled.header<IsAuth>`

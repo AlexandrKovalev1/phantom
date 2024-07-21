@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectDeviceType, setDeviceType } from './appSlice';
+import { selectDeviceType, setDeviceType } from './model/appSlice';
 
 export const useSetDeviceType = () => {
 	const deviceType = useSelector(selectDeviceType);

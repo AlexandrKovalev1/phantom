@@ -1,5 +1,5 @@
 //@ts-ignore
-import iconsSprite from '../../assets/img/icons-sprite.svg';
+import iconsSprite from '../../../assets/img/icons-sprite.svg';
 
 type IconPropsType = {
 	iconId: string;

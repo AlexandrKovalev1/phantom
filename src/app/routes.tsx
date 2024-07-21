@@ -1,9 +1,11 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 import App from './App';
 import { GlobalStyle } from '../common/styles/GlobalStyles';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../features/auth/model/authSlice';
-import { Products } from '../common/layout/Main/products/ui/Products';
+import { Products } from '../features/products/ui/Products';
+import { CardsProductsPage } from '../features/products/ui/CardsProductsPage/CardsProductsPage';
+import { ItemProductPage } from '../features/products/ui/ItemProductPage/ItemProductPage';
 
 export const PATH = {
 	ROOT: '/',
@@ -12,6 +14,7 @@ export const PATH = {
 	FAQ: '/FAQ',
 	LOGIN: '/login',
 	PRODUCTS: '/products',
+	PRODUCT_PAGE: `:title/:id`,
 	BALANCE: '/balance',
 	NEWS: '/news',
 	SUPPORT: '/support',
@@ -24,7 +27,7 @@ const DistributorOfPath = () => {
 	return isAuth ? <Navigate to={PATH.PRODUCTS} /> : <div>home</div>;
 };
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
 	{
 		path: PATH.ROOT,
 		element: (
@@ -36,12 +39,26 @@ export const router = createBrowserRouter([
 		errorElement: <Navigate to={'/error'} />,
 		children: [
 			{
+				path: '/phantom/',
+				element: <Navigate to={PATH.ROOT} />,
+			},
+			{
 				path: PATH.ROOT,
 				element: <DistributorOfPath />,
 			},
 			{
 				element: <Products />,
 				path: PATH.PRODUCTS,
+				children: [
+					{
+						path: PATH.PRODUCTS,
+						element: <CardsProductsPage />,
+					},
+					{
+						path: PATH.PRODUCT_PAGE,
+						element: <ItemProductPage />,
+					},
+				],
 			},
 			{
 				element: <div>balance</div>,

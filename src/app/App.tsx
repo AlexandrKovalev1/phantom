@@ -9,7 +9,7 @@ import { theme } from '../common/styles/Theme';
 import { useSelector } from 'react-redux';
 import { selectIsAuth } from '../features/auth/model/authSlice';
 import { useSetDeviceType } from './useSetDeviceType';
-import { selectDeviceType } from './appSlice';
+import { selectDeviceType } from './model/appSlice';
 
 function App() {
 	useSetDeviceType();
@@ -21,7 +21,7 @@ function App() {
 		<AppWrapper $isAuth={isAuth}>
 			<Header />
 			{desktopMode && <SideBar />}
-			<Main $isAuth={isAuth}>
+			<Main $isAuth={isAuth} $deviceType={deviceType}>
 				<Outlet />
 			</Main>
 		</AppWrapper>
