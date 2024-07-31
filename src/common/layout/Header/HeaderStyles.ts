@@ -30,7 +30,9 @@ const HeaderContainer = styled(Container)`
 	align-items: center;
 	justify-content: space-between;
 `;
-const LogoImg = styled.img``;
+const LogoImg = styled.img`
+	max-height: 55px;
+`;
 const NavLoginBlock = styled.div`
 	display: flex;
 	gap: 140px;

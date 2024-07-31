@@ -4,7 +4,7 @@ import cover from '../../assets/cover1.jpg';
 
 export const products: Product[] = [
 	{
-		id: nanoid(),
+		id: '1',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Internal',
@@ -17,7 +17,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '2',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'External',
@@ -30,7 +30,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '3',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Individual',
@@ -43,7 +43,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '4',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Internal',
@@ -56,7 +56,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '5',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Internal',
@@ -69,7 +69,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '234',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Internal',
@@ -82,7 +82,7 @@ export const products: Product[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum delectus, dolores est exercitationem fugit id illo illum maiores minus nobis, nulla pariatur quasi qui repellat sapiente totam ut?',
 	},
 	{
-		id: nanoid(),
+		id: '23456',
 		cover: cover,
 		Title: 'Counter Strike 2',
 		Type: 'Internal',

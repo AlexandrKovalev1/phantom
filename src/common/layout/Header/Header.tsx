@@ -1,9 +1,11 @@
 import { S } from './HeaderStyles';
 import { Link } from 'react-router-dom';
+// //@ts-ignore
+// import logo from '../../../assets/img/Logo.png';
+// //@ts-ignore
+// import logoAfterLogin from '../../../assets/img/LogoAfterLogin.png';
 //@ts-ignore
-import logo from '../../../assets/img/Logo.png';
-//@ts-ignore
-import logoAfterLogin from '../../../assets/img/LogoAfterLogin.png';
+import logo from '../../../assets/img/7vb.png';
 import { PATH } from '../../../app/routes';
 import { LogOutOrBurgerMenu } from './LogOutOrBurgerMenu/LogOutOrBurgerMenu';
 import { useSelector } from 'react-redux';
@@ -12,14 +14,14 @@ import { selectIsAuth } from '../../../features/auth/model/authSlice';
 type Props = {};
 export const Header = ({}: Props) => {
 	const isAuth = useSelector(selectIsAuth);
-	const LogoImg = isAuth ? logoAfterLogin : logo;
+	// const LogoImg = isAuth ? logoAfterLogin : logo;
 
 	return (
 		<S.Header $isAuth={isAuth}>
 			<S.HeaderContainer width={'1024px'}>
 				<S.LogoWrapper $isAuth={isAuth}>
 					<Link to={'/'}>
-						<S.LogoImg src={LogoImg} />
+						<S.LogoImg src={logo} />
 					</Link>
 				</S.LogoWrapper>
 				{!isAuth && (

@@ -1,17 +1,11 @@
 import { ProductCard } from './ProductCard/ProductCard';
-import { useAppDispatch, useAppSelector } from '../../../../app/store';
-import { productsThunks, selectProducts } from '../../model/productsSlice';
-import { useEffect } from 'react';
 import styled from 'styled-components';
 import { theme } from '../../../../common/styles/Theme';
+import { useAppSelector } from '../../../../app/store';
+import { selectProducts } from '../../model/productsSlice';
 
 export const CardsProductsPage = () => {
-	const dispatch = useAppDispatch();
 	const products = useAppSelector(selectProducts);
-	useEffect(() => {
-		dispatch(productsThunks.fetchProducts());
-	}, []);
-
 	return (
 		<ProductsWrapper>
 			{products.map(p => (

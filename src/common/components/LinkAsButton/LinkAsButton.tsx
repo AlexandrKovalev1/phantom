@@ -6,14 +6,16 @@ import { theme } from '../../styles/Theme';
 type Props = {
 	title: string;
 	to: string;
+	width?:number
 };
 
-export const LinkAsButton = ({ title, to }: Props) => {
-	return <LinkWrapper to={to}>{title}</LinkWrapper>;
+export const LinkAsButton = ({ title, to,width }: Props) => {
+	return <LinkWrapper to={to} style={{maxWidth:`${width}px`}}>{title}</LinkWrapper>;
 };
 
 const LinkWrapper = styled(Link)`
 	max-width: 200px;
+	display: inline-block;
 	width: 100%;
 	height: 40px;
 	text-align: center;

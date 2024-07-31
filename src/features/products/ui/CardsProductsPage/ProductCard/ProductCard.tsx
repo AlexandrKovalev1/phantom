@@ -1,8 +1,7 @@
-import { Product } from '../../../model/productsSlice';
-import styled, { css } from 'styled-components';
-import { theme } from '../../../../../common/styles/Theme';
-import { LinkAsButton } from '../../../../../common/components/LinkAsButton/LinkAsButton';
-import { S } from './ProductCard.styles';
+import {Product} from '../../../model/productsSlice';
+import {LinkAsButton} from '../../../../../common/components/LinkAsButton/LinkAsButton';
+import {S} from './ProductCard.styles';
+import {Link} from "react-router-dom";
 
 type Props = {
 	product: Product;
@@ -11,7 +10,9 @@ export const ProductCard = ({ product }: Props) => {
 	const { cover, Title, Type, subscribeStatus, daysLeft, id } = product;
 	return (
 		<S.CardWrapper>
-			<S.CoverImg src={cover} alt='cover-product' />
+			<Link to={`${Title}/${id}`}>
+				<S.CoverImg src={cover} alt='cover-product' />
+			</Link>
 			<S.BlockInfo>
 				<h2>{Title}</h2>
 				<h3>{Type}</h3>

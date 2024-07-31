@@ -84,6 +84,7 @@ const BurgerMenuBody = styled.div`
 	width: 100%;
 	height: 100%;
 	background-color: ${theme.darkMode.color.primary};
+	z-index: 99999999999999999999;
 `;
 
 export const S = {

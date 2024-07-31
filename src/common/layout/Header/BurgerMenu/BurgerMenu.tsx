@@ -1,7 +1,8 @@
-// @flow
+
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import {ReactNode, useEffect, useState} from 'react';
 import { S } from './BurgerMenuStyles';
+import {createPortal} from "react-dom";
 
 type Props = {};
 export const BurgerMenu = (props: Props) => {
@@ -18,12 +19,14 @@ export const BurgerMenu = (props: Props) => {
 	const handleSetIsOpen = () => {
 		setIsOpen(prevState => !prevState);
 	};
+
 	return (
 		<div>
 			<S.Button $isOpen={isOpen} onClick={handleSetIsOpen}>
 				<span></span>
 			</S.Button>
-			{isOpen && <S.BurgerMenuBody></S.BurgerMenuBody>}
+
+			{isOpen && createPortal(<S.BurgerMenuBody></S.BurgerMenuBody>,document.getElementById('root')!)}
 		</div>
 	);
 };
